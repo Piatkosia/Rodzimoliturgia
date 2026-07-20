@@ -1,0 +1,40 @@
+\def\stronatytulowa{%
+    \clearpage
+    \thispagestyle{empty}%
+
+    \begin{tikzpicture}[remember picture,overlay]
+
+        % Zewnêtrzna ramka
+        \draw[line width=1.2pt]
+            ([xshift=1.7cm,yshift=-1.7cm]current page.north west)
+            rectangle
+            ([xshift=-1.7cm,yshift=1.7cm]current page.south east);
+
+        % Wewnêtrzna, delikatniejsza ramka
+        \draw[line width=0.4pt]
+            ([xshift=1.9cm,yshift=-1.9cm]current page.north west)
+            rectangle
+            ([xshift=-1.9cm,yshift=1.9cm]current page.south east);
+
+    \end{tikzpicture}
+
+    \vspace*{\fill}
+
+    \begin{center}
+        \begin{minipage}{0.78\textwidth}
+            \centering
+            \hyphenpenalty=10000
+            \exhyphenpenalty=10000
+
+            {\fontsize{30}{38}\selectfont
+             \bfseries
+             \scshape
+             \@title
+             \par}
+        \end{minipage}
+    \end{center}
+
+    \vspace*{\fill}
+
+    \clearpage
+    }

@@ -1,0 +1,67 @@
+\documentclass[a4paper,12pt,openany]{book}
+\input{Pakiety/pakiety.tex}
+\input{Ustawienia/ustawienia.tex}
+
+\usepackage{times}
+
+\title{Obrzêdowoœæ S³owian}
+
+%==========================================================================================
+% Dokument glowny
+%==========================================================================================
+\begin{document}
+\pagenumbering{roman}
+%=========================================================================================
+% Strona tytu³owa
+%=========================================================================================
+\thispagestyle{empty}
+\stronatytulowa
+
+%========================================================================================
+% Spis tresci, spis tabel i~rysunków
+%========================================================================================
+%spis tresci
+%	\tableofcontents
+%	\myemptypage
+%%spis rysunków
+%	\listoffigures
+%	\newpage
+	%\myemptypage
+%spis tabel
+	\listoftables
+	\newpage
+	%\myemptypage
+
+%========================================================================================
+% Licznik Stron
+%========================================================================================
+\newcounter{licznikStron}
+\setcounter{licznikStron}{\value{page}}
+\setcounter{licznikStron}{1}
+\pagenumbering{arabic}
+\setcounter{page}{\value{licznikStron}}
+
+%========================================================================================
+% Tresc
+%========================================================================================
+\input{Rozdzial1/rozdzial1.tex}
+
+
+%========================================================================================
+% Dodatki
+%========================================================================================
+%\begin{appendix}
+%	\appendix
+%	\input{Dodatki/dodatek_a.tex}
+%	\input{Dodatki/dodatek_b.tex}
+%\end{appendix}
+
+%========================================================================================
+% Literatura
+%========================================================================================
+
+\begin{flushleft}
+%	\bibliography{bibliografia/bibliografia}
+\end{flushleft}
+
+\end{document}
